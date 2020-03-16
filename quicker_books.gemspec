@@ -27,6 +27,7 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "rails", "~> 6.0.2", ">= 6.0.2.1"
   spec.add_dependency "thor"
+  spec.add_dependency "qbwc"
   spec.add_dependency "qbxml"
 
   spec.add_development_dependency "mysql2"
