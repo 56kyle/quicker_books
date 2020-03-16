@@ -1,0 +1,10 @@
+<% @tabs = 0 -%>
+<% make_module_parents.each do |mod| -%>
+<%= tabs + 'module ' + mod %><% @tabs+=1 %>
+<% end -%>
+<% @part_children.select{|pc| find_children(pc).present? }.each do |c| -%>
+<%= tabs %><%= child_class(c) %>
+<% end -%>
+<% make_module_parents.each do -%>
+<% @tabs-=1 -%><%= tabs + 'end' %>
+<% end %>

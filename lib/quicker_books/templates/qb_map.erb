@@ -1,0 +1,5 @@
+module QbMap
+<% @head.traverse do |part| -%>
+  <% if part.name != 'text' && part.name != 'comment' && make_module_parents[1,100].is_a?(Array) -%>def <%= make_module_parents(part).map{|word|word.camelize}.join('::') %>; nil end<% end %>
+<% end -%>
+end
